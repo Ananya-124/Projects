@@ -1,0 +1,19 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    width: 800px;
+    
+}
+.white{
+    background-color: sandybrown;
+    width: 100px;
+    height: 100px;
+    
+}
+.black{
+    background-color: rgb(88, 15, 15);
+    width: 100px;
+    height: 100px;}
+    
+   
