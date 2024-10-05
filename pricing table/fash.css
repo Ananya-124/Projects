@@ -118,3 +118,9 @@ body>.head{
   text-align: center;
   color: crimson;
 }
+@media(max-width:1250px0){
+  .container1,.container2,.container3{
+    flex-direction: column;
+    height: 100%;
+  }
+}
