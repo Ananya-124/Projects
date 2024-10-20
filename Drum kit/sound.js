@@ -7,9 +7,8 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
     var buttonInnerHTML = this.innerHTML;
 
     makeSound(buttonInnerHTML);
-    document.querySelectorAll(this.innerHTML.style.color = "blue");
 
-    
+    buttonAnimation(buttonInnerHTML);
 
   });
 
@@ -19,7 +18,7 @@ document.addEventListener("keypress", function(event) {
 
   makeSound(event.key);
 
-  
+  buttonAnimation(event.key);
 
 });
 
@@ -28,8 +27,8 @@ function makeSound(key) {
 
   switch (key) {
     case "w":
-     
-     return "i am tired";
+      var tom1 = new Audio("sounds/tom-1.mp3");
+      tom1.play();
       break;
 
     case "a":
@@ -69,4 +68,14 @@ function makeSound(key) {
 }
 
 
+function buttonAnimation(currentKey) {
 
+  var activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100);
+
+}
