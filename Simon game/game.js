@@ -8,4 +8,14 @@ function nextSequence() {
   var audio1 = new Audio("Projects\Simon game\sounds\blue.mp3" + randcolor);
   audio1.play();
 }
-nextSequence();
+var userpatt = []
+
+     $(".main").click(function() {
+        var usercolor = $(this).attr("id");
+        userpatt.push(usercolor);
+    });
+    
+
+    
+
+
